@@ -9,18 +9,17 @@
   --bd-color: #b2c8ba;
   --bg-color: #f1eaff;
 }
-body {
-  background-color: var(--bg-color);
-}
+
 HTML {
   font-size: 62.5%;
 }
 body {
   font-family: "Poppins", sans-serif;
-  /* position: relative; */
+  background-color: var(--bg-color);
 }
 .App {
   height: 100vh;
+  display: flex;
 }
 .leftsidebar {
   background-color: #1d2b53;
@@ -30,7 +29,10 @@ body {
   font-size: 1.6rem;
   padding: 2rem;
   display: flex;
-  margin-top: -1015px;
+  /* margin-top: -1015px; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 .leftsidebar header img {
   width: 45px;
@@ -92,8 +94,9 @@ nav ul li {
 /* header?\ */
 
 .header-nav {
-  width: calc(100% - 250px);
+  width: calc(110% - 250px);
   margin-left: 250px;
+
   height: 50px;
   background-color: white;
   color: black;
@@ -101,6 +104,7 @@ nav ul li {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #b9b4c7;
+  position: sticky;
 }
 .left-header {
   display: flex;
@@ -193,7 +197,7 @@ nav ul li {
 }
 .search-wrapper svg {
   background-color: var(--bg-color);
-  width: 6rem;
+  width: 3.5rem;
   height: 4.3rem;
 
   color: black;
@@ -211,7 +215,7 @@ nav ul li {
 main {
   margin-left: 260px;
 
-  width: calc(100% - 260px);
+  width: calc(110% - 260px);
 }
 .top-part {
   display: flex;
@@ -276,7 +280,7 @@ main {
 }
 .table-data {
   margin: 40px 0 0 280px;
-  width: calc(100% - 280px);
+  width: calc(110% - 280px);
   height: 100vh;
   background-color: white;
 }
@@ -383,4 +387,51 @@ td {
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
   background-color: white;
+}
+/* mobile responsive */
+
+@media screen and (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .left-header span {
+    font-size: 1.4rem;
+  }
+  .left-worker span {
+    font-size: 1.2rem;
+  }
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 4rem;
+  }
+
+  .search-icon-placeholder {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+  }
+  .search-wrapper input {
+    width: 30rem;
+  }
+
+  .search-wrapper svg {
+    width: 3rem;
+    height: 4.3rem;
+  }
+  /* .leftsidebar {
+    width: 100%;
+    margin: 0;
+  } */
+
+  /* .header-nav {
+    width: 100%;
+    margin-left: 0;
+  } */
+
+  /* main {
+    margin-left: 0;
+    width: 100%;
+  } */
 }
