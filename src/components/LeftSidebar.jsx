@@ -12,6 +12,7 @@ import { MdOutlineColorLens } from "react-icons/md";
 import { LiaTelegram } from "react-icons/lia";
 import { IoMdLink } from "react-icons/io";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { PiCreditCard } from "react-icons/pi";
 
 function LeftSidebar() {
   return (
@@ -113,6 +114,18 @@ function LeftSidebar() {
               </li>
             </ul>
           </nav>
+        </div>
+        <div className="bottom-nav">
+          <div>
+            <i>
+              <PiCreditCard />
+            </i>
+          </div>
+
+          <div>
+            <p>Available credits</p>
+            <p>222.10</p>
+          </div>
         </div>
       </header>
     </div>
