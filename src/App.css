@@ -255,6 +255,7 @@ main {
   justify-content: space-between;
   font-size: 2rem;
   margin-top: 2rem;
+  padding-left: 2rem;
   align-items: center;
 }
 .top-part svg {
